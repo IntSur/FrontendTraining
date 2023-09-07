@@ -1,0 +1,18 @@
+div.ToInline {
+    background-color: #ff7676;
+    display: inline;
+    width: 100px;
+    height: 100px;
+}
+span.ToBlock {
+    background-color: #96ff76;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+span.ToInlineBlock {
+    background-color: #677eff;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}

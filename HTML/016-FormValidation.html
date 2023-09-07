@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>016-FormValidation</title>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data" autocomplete="on">
+        <input type="file">
+        <input type="text" name="username" placeholder="输入用户名" required>
+        <input type="password" name="userpassword" placeholder="输入密码" pattern="^\d{5}[abcd]$" required>
+        <input type="text" list="1">
+        <!--
+            <datalist><select>的区别：
+            select规定了用户只能选择给出的option值
+            datalist则可以让用户填入自定义的值
+        -->
+        <datalist id="1">√
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+        </datalist>
+        <input type="submit" name="submit">
+
+        <!-- 
+            <label>的作用：
+            当点击到label包裹的文本时，也会让对应id的控件生效。Egs：点击文本“男”，对应radio单选框也会被选中
+         -->
+        <label for="man">男</label>
+        <input type="radio" name="sex" value="man" id="man">
+        <label for="woman">女</label>
+        <input type="radio" name="sex" value="woman" id="woman">
+    </form>
+</body>
+</html>
