@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P179-180 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .topimg img {
+            width: 100%;
+            height: auto;
+            /* 相对于浏览器移动位置 */
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .main {
+            width: 60%;
+            height: 2000px;
+            background-color: #fff;
+            margin: 30px auto;
+        }
+        .main img {
+            width: 100%;
+            height: auto;
+            margin: 0px auto;
+        }
+        .ad1 {
+            width: 15%;
+            position: fixed;
+            left: 20px;
+            top: 200px;
+        }
+        .ad2 {
+            width: 15%;
+            position: fixed;
+            right: 20px;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topimg">
+        <img src="image/top.png" alt="">
+    </div>
+    <div class="main">
+        <img src="image/main.png" alt="">
+    </div>
+    <img src="image/ad1.png" alt="" class="ad1">
+    <img src="image/ad2.png" alt="" class="ad2">
+</body>
+</html>

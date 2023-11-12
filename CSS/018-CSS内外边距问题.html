@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P88-90 */
+        span {
+            margin: 0px 20px;
+            padding: 0px 20px;
+        }
+        div {
+            background-color: #3c3c3c;
+            margin-bottom: 100px;
+            margin-top: 50px;
+        }
+        div.father {
+            width: 100px;
+            height: 100px;
+            background-color: #888888;
+        /*  padding-top: 1px;
+            border-top: 1px solid #000; */
+            overflow: hidden;
+        }
+        div.son {
+            width: 50px;
+            height: 50px;
+            background-color: #3c3c3c;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Q1:行内元素只设置左右内外边距，不设置上下内外边距 -->
+    <span>行内元素只设置左右内外边距，不设置上下内外边距</span>
+    <!-- Q2:相邻块元素垂直外边距会选择最大外边距合并。
+        避免方法：不要这样写，直接表明两个块元素之间要间隔多少就行-->
+    <div>1</div>
+    <div>2</div>
+
+    <!-- Q3:嵌套块元素垂直外边距的合并 
+        解决方法：
+        1. 可以为父元素定义1像素的上边框或上内边距。
+        2. 可以为父元素添加overflow:hidden。-->
+    <div class="father"><!-- 快速创建父子块元素：.father>.son -->
+        <div class="son"></div>
+    </div>
+</body>
+</html>

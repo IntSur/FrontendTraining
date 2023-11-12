@@ -13,9 +13,6 @@
 > 11.熟练掌握CSS高级技巧强化CSS
 typora-copy-images-to: media
 ---
-
-https://www.bilibili.com/video/BV1Bx411u7cS?p=41&spm_id_from=pageDriver&vd_source=dec0df5946c5a4e7864de4bc96371c49
-
 # CSS的发展历程
 
 从HTML被发明开始，样式就以各种形式存在。不同的浏览器结合它们各自的样式语言为用户提供页面效果的控制。最初的HTML只包含很少的显示属性。

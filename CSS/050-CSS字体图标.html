@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P214-219 */
+        /* 第一步：先声明字体信息 */
+        @font-face {
+            font-family: 'testfont';
+            src: url('fonts/icomoon.eot?7kkyc2');
+            src: url('fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+                 url('fonts/icomoon.woff?7kkyc2') format('woff'),
+                 url('fonts/icomoon.ttf?7kkyc2') format('truetype'),
+                 url('fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* 第二步：创建字体信息 */
+        .fontclass {
+            font-family:'testfont';
+            font-size: 100px;
+            color: #00257b;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第三步：给目标元素用上该类 -->
+    <span class="fontclass"></span>
+    <span class="fontclass"></span>
+</body>
+</html>

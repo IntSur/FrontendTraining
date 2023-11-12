@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>013-CSS层叠性继承性特殊性</title>
+    <style>
+        div {
+            color: #000;
+        }
+        div {
+            color: #777;
+        }
+        div {
+            /* color: #000!important; */
+        }
+        /* 层叠性：当出现属性冲突时，标签会就近选择进的属性进行使用 */
+        /* 特殊性：属性是有优先级的，优先级的区分由权重进行区分，以下是权重计算公式 */
+        .lv0010 {/* 权重是0010 */
+            color: #2c68ff;
+        }
+
+        #lv0100 {
+            color: rgb(61, 51, 255);
+        }
+
+        nav ul li a {
+            font-size: 40px;
+        }
+
+        p {/* 权重是0000 */
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>层叠性：当出现属性冲突时，标签会就近选择进的属性进行使用</div>
+    <div>
+        <!-- 继承性：子标签会继承父标签的属性 -->
+        <p>继承性：子标签会继承父标签的属性</p>
+    </div>
+    <div class="lv0010">特殊性：属性是有优先级的，优先级的区分由权重进行区分，以下是权重计算公式</div>
+    <div class="lv0010">
+        <p>继承或者*的贡献值为0，0，0，0,子标签从父标签继承来的权重是0,不听从父标签的权重</p>
+    </div>
+    <div>每个元素（标签）的贡献值为0，0，0，1</div>
+    <div>每个类、伪类的贡献值为0，0，1，0</div>
+    <div id="lv0100">每个ID的贡献值为0，1，0，0</div>
+    <div style="font-size: large;">每个行内样式的贡献值为1，0，0，0</div>
+    <div>!important贡献值为无限大</div>
+
+    <nav>
+        <ul>
+            <li><a href="#">
+                div ul  li         0,0,0,3
+
+                .nav ul li        0,0,1,2
+                
+                a:hover         0,0,1,1
+                
+                .nav a          0,0,1,1   
+                
+                #nav p          0,1,0,1</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

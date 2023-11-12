@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>015-CSSborder</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+        }
+        input {
+            width: 100px;
+            height: 15px;
+            /* border-top: 1px black solid ; */
+            border: 1px #aaa solid;
+        }
+        table {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #aaa;
+            text-align: center;
+            border-collapse: collapse;/*合并*/
+        }
+        td {
+            border: 1px solid #aaa ;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px #aaa solid;
+            /* text-align: center; */
+        }
+        div:first-child {
+            border-radius: 10px;/*左上角*/
+        }
+        div:nth-child(2) {
+            border-radius: 10px 0px;/*对角线*/
+        }
+        div:nth-child(3) {
+            border-radius: 100px 0px 100px 0px;/*依次为左上右上右下左下*/
+        }
+        div:nth-child(4) {
+            border-radius: 50% 0px 50% 0px;/*50%和200px的一半100px是对等的*/
+        }
+        div:nth-child(5) {
+            border-radius: 100px 100px 0 0;
+            height: 100px;
+        }
+        div:nth-child(6) {
+            border-radius: 100px;
+            height: 100px;
+        }
+        div:nth-child(7) {
+            /* P82 */
+            /* padding-left: 10px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px; */
+            /* padding: 10px; */
+            /* padding: 10px 20px;上下 左右 */
+            /* padding: 10px 20px 30px;上 左右 下 */
+            padding: 10px 20px 30px 40px;/*上下左右*/
+
+            /* P83 */
+            /* Tips:可以使用PS测量网页各个模块宽高 */
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 边框圆角 -->
+    <div>border-radius: 10px</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>内边距</div>
+    <div></div>
+    <!-- 边框基本属性 -->
+    UserName:<input type="text" class="UN"/><br /><br />
+    PassWord:<input type="text" class="PS"/><br /><br />
+    E-mail:<input type="text" class="EM"/><br /><br />
+    Code:<input type="text" class="CD"/><br /><br />
+    <!-- 边框合并 -->
+    <table cellspacing="0">
+        <tr>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+        </tr>
+        <tr>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+        </tr>
+        <tr>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+            <td>somedata</td>
+        </tr>
+    </table>
+    <br /><br />
+</body>
+</html>

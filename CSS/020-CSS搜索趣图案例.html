@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* P94-98 */
+        div.father {
+            margin: 10px 0px 0px 10px;
+            width: 238px;
+            height: 294px;
+            border: 1px #D9E0EE solid;
+            border-top: 3px #ff8400 solid;
+        }
+        div.son1 {
+            height: 35px;
+            line-height: 35px;
+            padding-left: 20px;
+            border-bottom: 1px #D9E0EE solid;
+        }
+        .son2 img {
+            margin: 7px 0px 0px 7px;
+            width: 80%;
+            /* border: 1px black solid; */
+        }
+        .son2 ul {
+            margin-left: 10px;
+            list-style: none;
+            font-size: 12px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .son2 ul li {
+            /* padding: 10px 0px 0px 7px; */
+            padding-left: 10px;
+            height: 26px;
+            line-height: 26px;
+            background:url(image/IMG_5640.JPG) no-repeat left center;
+            background-size: 5px 5px;
+        }
+        .son2 ul li a {
+            color: #5f5f5f;
+            text-decoration: none;
+        }
+        .son2 ul li a:hover {
+            color:#ff8400 ;
+            text-decoration:underline ;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son1">搜索趣图</div>
+        <div class="son2">
+            <img src="image/Mega1.jpeg" alt="">
+            <ul>
+                <li><a href="#">Tesla1</a></li>
+                <li><a href="#">Tesla2</a></li>
+                <li><a href="#">Tesla3</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

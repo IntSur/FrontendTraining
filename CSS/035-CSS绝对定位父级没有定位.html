@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P169 */
+        div:first-child{
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            margin: 20px;
+            /* position: absolute; */
+            /* 若所有父元素都没有定位，子元素就以浏览器左上角为准对齐 */
+        }
+        div:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 213, 0);
+            top: 50px;
+            left: 50px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

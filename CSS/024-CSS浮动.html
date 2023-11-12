@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P102-111 */
+        div.div1 {
+            width: 350px;
+            height: 150px;
+            margin: auto;
+            border: 3px solid #cccccc;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        img {
+            width: 50px;
+            float: left;
+        }
+
+        div.div2 {
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: rgb(119, 119, 119);
+        }
+        div.div3 {
+            width: 200px;
+            height: 300px;
+            background-color: rgb(48, 48, 48);
+
+            /* float: left; 不写这个 标准流就会沉底 浮动流就是上升盖住标准流*/
+        }
+
+        div.father_div {
+            width: 500px;
+            height: 500px;
+            background-color: #535353;
+            margin: auto;
+        }
+        div.son_div1 {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            float: left;
+        }
+        div.son_div2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(48, 48, 48);
+            float: left;
+            /* 如果上一个元素有浮动，则A元素顶部会和上一个元素的顶部对齐。 */
+            /* 如果上一个元素是标准流，则A元素的顶部会和上一个元素的底部对齐。 */
+            /* 元素添加浮动后，元素会具有行内块元素的特性。 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 用于做文字环绕 -->
+    <div class="div1">
+        Css3（CSS语法、选择器、字体样式、边框、背景、图片格式详解、定位、浮动、盒模型。
+        CSS3新增选择器及新增属性、圆角、阴影、伸缩布局、变形、过渡、动画。
+        CSS使用的高级技巧） 
+        <img src="image/model3.jpeg" alt="">
+        视频教程及配套出自http://yun.itheima.com/course/267.html?bili
+    </div>
+    
+    <div class="div2">标准流</div>
+    <div class="div3">浮动流</div>
+    <br>
+  
+    <div class="father_div">
+        <!-- 浮动的元素总是找理它最近的父级元素对齐。但是不会超出内边距的范围。 -->
+        <div class="son_div1"></div>
+        <div class="son_div2"></div>
+    </div>
+
+</body>
+</html>

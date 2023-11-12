@@ -8,12 +8,15 @@
         <form action="www.baidu.com">
             <table>
                 <tr>
+                    <!-- 没有name属性 数据不会提交走 -->
                     <td><input type="text" name="username"></td>
                 </tr>
                 <tr>
                     <td><input type="password" name="userpassword"></td>
                 </tr>
                 <tr>
+                    <!-- submit具有提交表单的能力，其他type都不具备。
+                    value属性设置按钮上的文本 -->
                     <td><input type="submit" value="Submit"></td>
                 </tr>
             </table>

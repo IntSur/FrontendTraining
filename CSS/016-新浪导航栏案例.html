@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P83-84 */
+        /* Tips:可以使用PS测量网页各个模块宽高 */
+        nav {
+            height: 41px;
+            background-color: #fcfcfc;
+            border-bottom: 1px #EDEEF0 solid;
+            border-top: 3px #ff5f15 solid;
+        }
+        nav a {
+            /* 取消超链接下划线 */
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            /* 行高=块高就能垂直居中 */
+            height: 41px;
+            line-height: 41px;
+            padding: 0 20px;
+            /* 转换为行内块元素 */
+            display: inline-block;
+        }
+        a:hover {
+            background-color: rgb(166, 166, 166);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">手机新浪网</a>
+        <a href="#">网站导航</a>
+        <a href="#">三个字</a>
+    </nav>
+</body>
+</html>

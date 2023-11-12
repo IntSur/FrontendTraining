@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P167-168 */
+        div:first-child{
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            /* 子级是绝对定位 父级要用相对定位 */
+            position: relative;
+        }
+        div:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 213, 0);
+            /* 绝对定位是将元素依据最近的已经定位（绝对、固定或相对定位）的父元素（祖先）进行定位。 */
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            /* 如果只是给盒子指定绝对定位，但是没有给与边偏移，
+            那这个盒子以标准流来显示排序，和上一个盒子的底边对齐，但是不占有位置。 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

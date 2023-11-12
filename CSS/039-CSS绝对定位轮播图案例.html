@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P174-178 */
+        /* 元素添加了绝对定位和固定定位之后，ß元素模式也会发生转换，都转换为行内块模式。 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .bgi {
+            max-width: 100%;
+            height: 100%;
+        }
+        .div1 {
+            width: 100%;
+            height: 758px;
+            position: relative;
+            object-fit: cover;
+        }
+        .arrow-l,.arrow-r {
+            width: 20px;
+            position: absolute;
+            top: 50%;
+            margin-top: -19.5px;
+        }
+        .arrow-l {
+            left: 5px;
+        }
+        .arrow-r {
+            right: 5px;
+        }
+        ul {
+            list-style: none;
+        }
+        .dots {
+            width: 65px;
+            height: 13px;
+            background-color: #ccc;
+            position: absolute;
+            left: 50%;
+            margin-left: -32px;
+            bottom: 5px;
+            border-radius: 10px;
+        }
+        .dots li {
+            width: 9px;
+            height: 9px;
+            background-color: #8e8e8e;
+            float: left;
+            margin: 2px;
+            border-radius: 50%;
+        }
+        .div2 {
+            font-size: 50px;
+            font-weight: 500;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            margin-left: -117px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <img src="image/hero_iphone15.jpg" alt="" class="bgi">
+        <a href="#"><img src="image/arrow-l.png" alt="" class="arrow-l"></a>
+        <a href="#"><img src="image/arrow-r.png" alt="" class="arrow-r"></a>
+        <ul class="dots">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="div2"> Big Blow</div>
+    </div>
+</body>
+</html>

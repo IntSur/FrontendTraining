@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P116-120 */
+        /* 清除浮动主要为了解决父级元素因为子级浮动引起内部高度为0的问题。 */
+        .fatherdiv {
+            /* border: 1px #aeaeae solid;  */
+            width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #000;
+            /* 方法2: 给父盒子写一个overflow：hidden */
+            overflow: hidden; /* 触发BFC */
+        }
+        .sondiv1 {
+            width: 200px;
+            height: 200px;
+            background-color: azure;
+            float: left;
+        }
+        .sondiv2 {
+            width: 400px;
+            height: 200px;
+            background-color: #91a9f7;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="fatherdiv">
+        <div class="sondiv1">sondiv1</div>
+        <div class="sondiv2">sondiv2</div>
+    </div>
+
+</body>
+</html>

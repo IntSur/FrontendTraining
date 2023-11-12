@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P168 */
+        div:first-child{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            /* 绝对定位最重要的一点是，它可以通过边偏移移动位置，但是它完全脱标，完全不占位置。 */
+        }
+        div:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(255, 213, 0);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

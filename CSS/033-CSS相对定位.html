@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P167 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+
+        }
+        div:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 213, 0);
+            /* 相对定位是将元素相对于它在标准流中的位置进行定位（盒子左上角）
+            相对定位最重要的一点是，它可以通过边偏移移动位置，但是原来的所占的位置，继续占有。 */
+            left: 300px;
+            top: 200px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

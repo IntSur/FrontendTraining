@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P203 */
+        /* 由于vertical-align默认值是基线对齐
+        当子图片元素大小和父元素大小相等时，底边会出现缝隙。
+        有两种方法解决。 */
+        div {
+            height: 220px;
+            width: 220px;
+            background-color: red;
+        }
+        img {
+            vertical-align: top;/* 1.给img vertical-align:middle | top等等。  让图片不要和基线对齐。*/
+            display: block;/* 2.给img 添加 display：block; 转换为块级元素就不会存在问题了。 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="image/ad1.png" height="220px" width="220px" alt="">
+    </div>
+</body>
+</html>
