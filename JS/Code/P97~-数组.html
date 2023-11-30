@@ -11,6 +11,17 @@
         /* 2.创建字面量读取 */
         var array2 = [0 ,0.2 ,'4' ,true];
         console.log(array2[2]);
+        console.log(array2.length);
+
+        /* 求一段数组的总和与平均数 */
+        var array3 = [5, 7, 9, 10, 23];
+        var sumOfArray3 = 0;
+        var averageOfArray3 = 0;
+        for(var i = 0; i < array3.length; i++) {
+            sumOfArray3 += array3[i];
+        }
+        averageOfArray3 = sumOfArray3/array3.length;
+        console.log(sumOfArray3 ,averageOfArray3);
     </script>
 </head>
 <body>
