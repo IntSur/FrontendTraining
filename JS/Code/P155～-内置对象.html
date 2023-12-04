@@ -4,6 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        /* 内置对象是js已经封装好能直接用的对象。*/
+
+        /* Math不是一个构造器（构造函数），他的内置对象不需要new Math来创建 */
+        console.log(Math.PI);
+        console.log(Math.max(1, 2, 4));
+        console.log(Math.min(2, 41, 124));
+        console.log(Math.abs(-1));
+        console.log(Math.floor(1.6));/* 向下取整 */
+        console.log(Math.ceil(1.6));/* 向上取整 */
+        console.log(Math.ceil(-1.6));
+        console.log(Math.round(2.5));/* 四舍五入 */
+        console.log(Math.round(-2.5));/* 负数四舍五入往大取整 */
+        /* Math.random() */
+        /* 1.随机取值 */
+        console.log(Math.random());/* 不接收参数，只输出[0, 1)的浮点数 */
+        /* 2.在整数区间[10， 20]之间取一个随机整数 */
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandomInt(10, 20));
+        /* 3.随机点名 */
+        var array1 = ['jobs', 'kook', 'mask', 'van'];
+        console.log(array1[getRandomInt(0, array1.length - 1)]);
+
+        /* Date的内置对象需要new Date来创建 */
+        var date1 = new Date();
+        var date2 = new Date('1999-5-19 8:8:8');
+        var date3 = new Date(1999, 5, 19);
+        console.log(date1);/* 显示当前系统时间 */
+        console.log(date2);
+        console.log(date3);
+    </script>
 </head>
 <body>
     
