@@ -36,6 +36,32 @@
         console.log(date1);/* 显示当前系统时间 */
         console.log(date2);
         console.log(date3);
+        /* 格式化输出年月日星期几 */
+        var date4 = new Date();
+        var year = date4.getFullYear();
+        var month = date4.getMonth() + 1;/* 月份是从0开始记 */
+        var date = date4.getDate();
+        var day = date4.getDay();/* 周日是0，周一到周六是1~6 */
+        var array2 = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Saturday'];
+        console.log('今天是' + year + '-' + month + '-' + date + '-' + array2[day]);
+        /* 精确到几时几分几秒，并自动补零 8:8:8 */
+        var hour = date4.getHours() < 10 ? '0' + date4.getHours() : date4.getHours();
+        var minute = date4.getMinutes() < 10 ? '0' + date4.getMinutes() : date4.getMinutes();
+        var seconds = date4.getSeconds() < 10 ? '0' + date4.getSeconds() : date4.getSeconds();
+        console.log(hour + ':' + minute + ':' + seconds);
+        /* 获取时间戳的三种方式 */
+        /* 1. */
+        var timer = new Date();
+        var timer1 = timer.getTime();
+        var timer2 = timer.valueOf();
+        /* 2. */
+        var timer3 = +new Date();
+        /* 3. */
+        var timer4 = Date.now();
+        /* 倒计时 */
+        function countDone(timeYouWantToSet) {
+            return hour
+        }
     </script>
 </head>
 <body>
