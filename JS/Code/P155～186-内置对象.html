@@ -7,6 +7,8 @@
     <script>
         /* 内置对象是js已经封装好能直接用的对象。*/
 
+
+        /* 数学对象 */
         /* Math不是一个构造器（构造函数），他的内置对象不需要new来创建 */
         console.log(Math.PI);
         console.log(Math.max(1, 2, 4));
@@ -29,6 +31,8 @@
         var array1 = ['jobs', 'kook', 'mask', 'van'];
         console.log(array1[getRandomInt(0, array1.length - 1)]);
 
+
+        /* 日期对象 */
         /* Date的内置对象需要new Date来创建 */
         var date1 = new Date();
         var date2 = new Date('1999-5-19 8:8:8');
@@ -71,6 +75,9 @@
         }
         console.log(countDone('2024-1-1 00:00:00'));
 
+
+
+        /* 数组对象 */
         /* 创建数组的两种方式 */
         /* 1. */
         var array3 = [1, 2, 3];
@@ -111,6 +118,71 @@
         console.log(array6.toString());
         array6.join('-');
         console.log(array6.join('-'));
+        /* 查找数组索引 */
+        console.log(array6.indexOf(53));
+        console.log(array6.lastIndexOf(53));
+
+
+        /* 字符串对象 */
+        /* 基本包装类型 */
+        /* 对象 和 复杂数据类型 才有属性和方法 */
+        var str1 = 'string';
+        /* 为什么以上简单数据类型str能用length？
+        因为JS有基本包装类型：把简单数据类型包装成复杂数据类型。*/
+        /* 字符串不可变性：字符串指的是里面的值不变，看上去内容改变了但其实是地址变了，
+        内存中新开辟了一个内存空间。所以不要频繁拼接字符串，导致占用不必要的内存。 */
+        /* 查找字符串中元素的索引位置 */
+        var str2 = 'jdsfnjnsfsafjlj';
+        console.log(str2.indexOf('s'));
+        console.log(str2.indexOf('s', 3));//从3之后的位置开始找 包括3
+        /* 查找字符串中所有s出现的位置和次数 */
+        var num = 0;
+        var address = str2.indexOf('s');
+        while(address !== -1) {
+            console.log('s出现在index' + address);
+            num++;
+            address = str2.indexOf('s',address + 1);
+        }
+        console.log('出现次数是：' + num);
+        /* 根据索引返回字符 */
+        /* 1. */
+        str2.charAt(0);
+        console.log(str2.charAt(0));
+        /* 2. */
+        str2.charCodeAt(0);
+        console.log(str2.charCodeAt(0));
+        /* 3.H5开始支持 */
+        console.log(str2[0]);
+        /* 拼接字符串 */
+        console.log(str2.concat('拼接上的字符串'));
+        /* 截取字符串 */
+        console.log(str2.substr(4, 6));
+        /* 替换字符串 */
+        console.log(str2.replace('safjl','替换'));
+        /* 分割成数组 */
+        console.log(str2.split('s'));
+
+        /* 统计出现次数最多的字符 */
+        var obj2 = {};
+        var chars = '';
+        for(var i = 0; i < str2.length; i++){
+            chars = str2.charAt(i);
+            if(obj2[chars]) {
+                obj2[chars]++;
+            } else {
+                obj2[chars] = 1;
+            }
+        }
+        console.log(obj2);
+        var max = 0;
+        var maxk = 0;
+        for(var k in obj2) {
+            if(obj2[k] > max) {
+                max = obj2[k];
+                maxk = k;
+            }
+        }
+        console.log('最多出现的数是' + maxk + ' 出现了' + max + '次');
     </script>
 </head>
 <body>
