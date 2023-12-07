@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Do not Press</button>
+    <button id="btn2">点击以更新时间</button>
+    <div id="div1">这里显示时间</div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script>
+        /* 事件三要素：事件源 事件类型 事件处理程序 */
+        var btn1 = document.querySelector('#btn1'); // 1.事件源
+        btn1.onclick/* 2.onclick:事件类型 */ = function() {
+            alert('OK.Nothing happened.');
+        }// 3.function:事件处理程序
+
+        /* 改变元素内容 */
+        var btn2 = document.querySelector('#btn2');
+        var div1 = document.querySelector('#div1');
+        var div2 = document.querySelector('#div2');
+        btn2.onclick = function () {
+            div1.innerText = getDate();
+        }
+        
+        function getDate() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth();
+            var date = today.getDate();
+            var day = today.getDay();
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var seconds = today.getSeconds();
+            return '今天是' + year + '-' + month + '-' + date + ' 星期' + day + ' ' + hour + ':' + minute + ':' + seconds;
+        }
+        /* 也可以省去事件类型这一步 */
+        var div2 = document.querySelector('#div2');
+        div2.innerText = getDate();
+
+        /* innerText和innerHTML的区别 */
+        var div3 = document.querySelector('#div3');
+        div3.innerText = '<strong>abc<strong>';//不识别html标签、空格、换行
+        div3.innerHTML = '<strong>abc<strong>';//识别html标签（最常用）
+        /* 共同点：都可以读写 */
+    </script>
+</body>
+</html>
