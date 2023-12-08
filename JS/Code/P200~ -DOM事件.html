@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #box {
+            width: 400px;
+            height: 30px;
+            margin: 50px auto;
+            border-bottom: 1px #000 solid;
+            position: relative;
+        }
+        #pwd {
+            width: 300px;
+            border: 0px;
+            outline: none;
+        }
+        #crossHair {
+            position: absolute;
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <button id="btn1">Do not Press</button>
@@ -11,6 +29,22 @@
     <div id="div1">这里显示时间</div>
     <div id="div2"></div>
     <div id="div3"></div>
+
+    <img id="model3" src="../../CSS/image/model3.jpeg" alt="">
+
+    <input id="input1" type="text" value="">
+    <button id="btn3">提交</button>
+
+    <div id="box">
+        <label for="">
+            <img src="../../CSS/image/crosshair.png" alt="" id="crossHair">
+        </label>
+        
+        <input type="password" id="pwd">
+    </div>
+
+
+
     <script>
         /* 事件三要素：事件源 事件类型 事件处理程序 */
         var btn1 = document.querySelector('#btn1'); // 1.事件源
@@ -46,6 +80,36 @@
         div3.innerText = '<strong>abc<strong>';//不识别html标签、空格、换行
         div3.innerHTML = '<strong>abc<strong>';//识别html标签（最常用）
         /* 共同点：都可以读写 */
+
+        /* 修改元素属性 */
+        var img1 = document.querySelector('#model3');
+        img1.onclick = function() {
+            img1.src = '../../CSS/image/modely.jpeg'
+        }
+        /* 修改表单元素属性（特殊） */
+        var btn3 = document.querySelector('#btn3');
+        var input1 = document.querySelector('#input1');
+        btn3.onclick = function() {
+            input1.value = '被点击了';
+            // btn3.disabled = true;
+            this.disabled = true;//常用this
+        }
+
+        /* 点击按钮切换密码可见 */
+        var PwdHideFlag = 1;
+        var crossHairBtn = document.querySelector('#crossHair');
+        var pwd = document.querySelector('#pwd')
+        crossHairBtn.onclick = function() {
+            if(PwdHideFlag == 1) {
+                this.src = '../../CSS/image/直线 1.png';
+                pwd.type = 'text';
+                PwdHideFlag = 0;                
+            } else {
+                this.src = '../../CSS/image/crosshair.png';
+                pwd.type = 'password';
+                PwdHideFlag = 1;
+            }
+        }
     </script>
 </body>
 </html>
