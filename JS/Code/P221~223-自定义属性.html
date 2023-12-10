@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" oemAttribute="oemAttribute1"></div>
+    <script>
+        /* 获取自定义属性 */
+        var div1 = document.querySelector('#div1');
+        console.log(div1.id);//多用于元素自带的属性
+        console.log(div1.getAttribute('oemAttribute'));// 多用于元素自定义属性
+        /* 设置自定义属性 */
+        div1.id = '2';
+        div1.setAttribute('oemAttribute', 'oemAttribute2');
+        console.log(div1.id);
+        console.log(div1.getAttribute('oemAttribute'));
+        /* 移除自定义属性 */
+        div1.removeAttribute('oemAttribute');
+        console.log(div1.getAttribute('oemAttribute'));// null
+    </script>
+</body>
+</html>
