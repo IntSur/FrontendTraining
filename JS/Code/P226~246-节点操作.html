@@ -66,6 +66,26 @@
 
         /* 删除节点 */
         ul.removeChild(ul.children[0]);
+
+        /* 复制节点 */
+        var linode1 = ul.children[0].cloneNode();//()里为空或者false，只复制元素标签
+        ul.appendChild(linode1);
+        var linode2 = ul.children[0].cloneNode(true);//()为true，全都复制过来
+        ul.insertBefore(linode2, ul.children[0]);
+
+        /* 三种创建元素的方式 */
+        /* 1.document.write */
+        document.write('<div>123</div>');//缺点：会导致页面重载，所以一般不用
+        /* 2.innerHTML */
+        // ul.innerHTML = '<li>123</li>';
+        /* 3.creatElement */
+        var newli = document.createElement('li');
+        ul.appendChild(newli);
+        /* Tips:
+        innerHTML和createElement的区别：
+        如果innerHTML是拼接字符串进行新建元素会开辟大量空间，会很慢。
+        但它如果是以拼接成数组，效率是最高的，结构稍复杂。
+        createElement创建多个元素效率稍低一些，但是结构更清晰 */
     </script>
 </body>
 </html>
