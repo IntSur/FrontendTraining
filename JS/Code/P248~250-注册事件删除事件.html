@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            margin: 30px auto;
+        }
+    </style>
 </head>
 <body>
     <button>按钮1</button>
     <button>按钮2</button>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
     <script>
         /* 注册事件(绑定事件) */
         var btns = document.querySelectorAll('button');
@@ -29,6 +42,22 @@
         /* 3.IE9之前可以使用attachEvent()，但不提倡使用 */
         // btns[1].attachEvent('onclick', function() {
         // })
+
+        /* 删除事件 */
+        /* 1.传统方式删除事件 */
+        var div1 = document.querySelector('div');
+        div1.onclick = function() {
+            div1.onclick = null;
+            alert('1');
+        }
+        /* 2.removeEventListener() */
+        var div2 = div1.nextElementSibling;
+        div2.addEventListener('click', fn);//函数名称后不需要加()
+        function fn() {
+            alert('1');
+            div2.removeEventListener('click', fn);
+        }
+        
     </script>
 </body>
 </html>
