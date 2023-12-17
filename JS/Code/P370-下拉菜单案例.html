@@ -9,42 +9,67 @@
             list-style-type: none;
         }
         
+        .nav>li {
+            float: left;
+        }
+        a {
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .nav ul {
+            display: none;
+        }
     </style>
+    <script src="jQuery.js"></script>
 </head>
 <body>
     <ul class="nav">
-        <li>基本
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <li>
+            <a href="">基本</a>
+            <ul >
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
             </ul>
         </li>
-        <li>技能
+        <li>
+            <a href="">技能</a> 
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
             </ul>
         </li>
-        <li>作品
+        <li>
+            <a href="">作品</a>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
             </ul>
         </li>
-        <li>社交媒体
+        <li>
+            <a href="">社交媒体</a>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
+                <li>文案</li>
             </ul>
         </li>
     </ul>
+    <script>
+        $(function() {
+            $(".nav>li").mousemove(function () {
+                $(this).children("ul").show();// 原生JS中的this要写成$(this)
+            })
+            $(".nav>li").mouseout(function () {
+                $(this).children("ul").hide();
+            })
+        })
+    </script>
 </body>
 </html>

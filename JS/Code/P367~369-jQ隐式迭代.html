@@ -37,7 +37,7 @@
             $('ul li:odd').css('color', 'red');
             $('ul li:even').css('color', 'blue');
 
-            /* 用jQ方法获取父子元素 */
+            /* 用jQ方法选择元素 */
             $(".son").parent();// 获取最近的那个父代
             console.log($(".son").parent());
             $(".son").children("div");// 查找最近子代里的div
@@ -46,6 +46,8 @@
             console.log($(".son").find("div"));
             $("li").siblings();// 查找所有的兄弟节点
             console.log($("li").siblings());
+            var index = 2;
+            $("div").eq("index").css("color", "skyblue");// 选取第index元素
         })
     </script> 
 </body>
