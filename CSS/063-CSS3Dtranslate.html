@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P239~240 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            perspective: 500px;/* 添加透视，近大远小，数值越大3D效果越明显 */
+        }
+        img {
+            display: block;
+            width: 300px;
+            margin: 50px auto;
+            transition: all 5s;
+        }
+        img:hover {
+            transform: translate3d(100px, 0px, 0px)
+        }
+    </style>
+</head>
+<body>
+    <img src="image/hero_iphone15.jpg" alt="">
+</body>
+</html>

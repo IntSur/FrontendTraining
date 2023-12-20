@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P245~246 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            perspective: 500px;/* 添加透视，近大远小，数值越大3D效果越明显 */
+        }
+        img {
+            position: absolute;
+            display: block;
+            width: 300px;
+            margin: 50px auto;
+            animation: mymove 2s;/* 更多参数参考css文档 */
+        }
+        @keyframes mymove {
+            0% {left: 0px;}
+            25% {left: 20px;}
+            50% {left: 80px;}
+            100% {left: 20px;}
+        }
+    </style>
+</head>
+<body>
+    <img src="image/hero_iphone15.jpg" alt="">
+</body>
+</html>
