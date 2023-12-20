@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* P251 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 80%;
+            height: 100px;
+            margin: 50px auto;
+            border: 1px grey solid;
+            display: flex;/* 父盒子添加伸缩布局模式 */
+            min-width: 600px;/* 保护到600px时不变形 */
+            /* flex-direction: column; *//* 垂直排列 */
+        }
+        .container div:first-child{
+            /* flex: 1; */
+            width: 300px;/* 不一定要flex：1，也可以固定宽度 */
+            background-color: #ff0000;
+        }
+        .container div:nth-child(2){
+            flex: 1;
+            background-color: #00ff00;
+        }
+        .container div:last-child{
+            flex: 1;
+            background-color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
