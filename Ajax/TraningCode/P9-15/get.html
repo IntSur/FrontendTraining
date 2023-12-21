@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P9-10 get请求体</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px #00cc00 solid;
+        }
+    </style>
+</head>
+<body>
+    <button>提交GET请求</button>
+    <div></div>
+
+    <script>
+        var btn1 = document.querySelector('button');
+        var div1 = document.querySelector('div');
+
+        btn1.addEventListener('click', function() {
+            // 1.创建xhr对象
+            var xhr = new XMLHttpRequest();
+            // 2.设置请求行 url
+            xhr.open('GET', 'http://127.0.0.1:8000/server?a=100&b=200');
+            // 3.发送请求
+            xhr.send();
+            // 4.判断响应状态
+            xhr.addEventListener('readystatechange', function() {
+                if(xhr.readyState === 4) {// 判断 (4 = 服务端返回了所有的结果)
+                    if(xhr.status >= 200 && xhr.status < 300) {
+                        console.log(xhr.status);// 状态码
+                        console.log(xhr.statusText);// 状态字符
+                        console.log(xhr.getAllResponseHeaders());// 获得请求头
+                        console.log(xhr.response);// 获得请求体
+                        div1.innerText = xhr.response;
+                    }
+                } 
+            })
+        })
+    </script>
+</body>
+</html>

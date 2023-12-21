@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P15</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px #00cc00 solid;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        var div1 = document.querySelector('div');
+        window.addEventListener('keydown', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.responseType = 'json';// 设置响应体数据类型为json 自动把字符串转换为对象
+            xhr.open('POST', 'http://127.0.0.1:8000/json-server');
+            xhr.send();
+            xhr.addEventListener('readystatechange', function() {
+                if(xhr.readyState === 4) {
+                    if(xhr.status >= 200 && xhr.status < 300) {
+                        /* 手动转换 */
+                        // var strdata = JSON.parse(xhr.response);
+                        // div1.innerText = strdata.name;
+                        /* 自动转换 */
+                        console.log(xhr.response);
+                        div1.innerText = xhr.response.name;
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>
