@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成器函数参数</title>
+</head>
+<body>
+    <script>
+        function * gen(arg){
+            console.log(arg);
+            let one = yield 111;
+            console.log(one);
+            let two = yield 222;
+            console.log(two);
+            let three = yield 333;
+            console.log(three);
+        }
+
+        //执行获取迭代器对象
+        let iterator = gen('AAA');//AAA作为生成器的实参进入函数
+        console.log(iterator.next());//第一次调用生成器函数,返回是第一个yield前代码块的结果
+        //next方法也可以有实参
+        console.log(iterator.next('BBB'));//第二次调用生成器函数,这里传入的参数BBB 将作为第一个yield代码块的返回值
+        console.log(iterator.next('CCC'));
+        console.log(iterator.next('DDD'));
+        
+    </script>
+</body>
+</html>
