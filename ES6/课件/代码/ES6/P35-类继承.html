@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象继承</title>
+</head>
+<body>
+    <script>
+        /* ES5写法 */
+        //手机
+        function Phone(brand, price){
+            this.brand = brand;
+            this.price = price;
+        }
+
+        Phone.prototype.call = function(){
+            console.log("我可以打电话");
+        }
+
+        //智能手机
+        function SmartPhone(brand, price, color, size){
+            Phone.call(this, brand, price);//用 this 来设置相同的上下文（即当前正在创建的 SmartPhone 实例）。这种方式称为显式调用构造函数，它允许 SmartPhone 实例继承 Phone 构造函数的属性和行为。这是实现继承的一种方式。
+            this.color = color;
+            this.size = size;
+        }
+
+        //设置子级构造函数的原型
+        SmartPhone.prototype = new Phone;//SmartPhone 的实例就可以继承 Phone 的属性和方法，实现了原型链继承。
+        SmartPhone.prototype.constructor = SmartPhone;// 此步骤为校正 可以不写
+
+        //声明子类的方法
+        SmartPhone.prototype.photo = function(){
+            console.log("我可以拍照")
+        }
+
+        SmartPhone.prototype.playGame = function(){
+            console.log("我可以玩游戏");
+        }
+
+        const chuizi = new SmartPhone('锤子',2499,'黑色','5.5inch');
+
+        console.log(chuizi);
+
+    </script>
+</body>
+</html>
