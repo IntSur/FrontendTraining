@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 使用babel将ES6代码转换打包成ES5 https://www.babeljs.cn/-->
     <!-- 
-        1. 安装工具 npm i babel-cli babel-preset-env browserify(webpack) -D
-        2. 编译 npx babel src/js -d dist/js --presets=babel-preset-env
+        1. 安装工具 npm i babel-cli babel-preset-env browserify(webpack) -D// 实际使用webpack
+        2. ES6代码转换成ES5 npx babel src/js -d dist/js --presets=babel-preset-env
         3. 打包 npx browserify dist/js/app.js -o dist/bundle.js
+        Tips：改源码：先把ES6源码修改，再重新走2、3步
      -->
      <script src="dist/bundle.js"></script>
 </body>
