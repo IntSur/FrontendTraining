@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>012-HTML表单</title>
+    </head>
+    <body>
+        <h1>&lt;form&gt;1</h1>
+        <form action="https://www.baidu.com">
+            <table>
+                <tr>
+                    <!-- 没有name属性 数据不会提交走 -->
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="userpassword"></td>
+                </tr>
+                <tr>
+                    <!-- submit具有提交表单的能力，其他type都不具备。
+                    value属性设置按钮上的文本,以及被提交的数据内容 -->
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+        <h1>&lt;form&gt;2</h1>
+        <form action="https://www.bilibili.com/">
+            <input type="submit" value="submit to bilibili."></br>
+            <input type="checkbox" name="gender" value="male">male</br>
+            <input type="checkbox" name="gender" value="female">female
+        </form>
+    </body>
+</html>

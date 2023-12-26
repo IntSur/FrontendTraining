@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        input,select,textarea {
+            width: 240px;
+            margin: 10px 0;
+            padding: 0.5em 1em;
+        }
+        label {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="text" id="username" name="username" required><label for="username">用户名</label>
+            <input type="email" id="email" name="email" required><label for="email">邮箱</label>
+            <input type="tel" id="tel" name="tel" required><label for="tel">手机</label>
+            <input type="url" id="url" name="url" required><label for="url">网址</label>
+            <select name="#" id="">
+                <option value="1">选项一</option>
+                <option value="2">选项二</option>
+                <option value="3">选项三</option>
+                <option value="4">选项四</option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10" placeholder="留言（必填）" required></textarea>
+            <input type="submit" value="提交表单">
+        </form>
+    </div>
+</body>
+</html>

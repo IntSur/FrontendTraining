@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* 输入框清空按钮的修改（移动端有兼容性问题） */
+        input[type="search"]::-webkit-search-cancel-button{
+            -webkit-appearance: none;
+            height: 15px;
+            width: 15px;
+            background-color: black;
+        }
+    </style>
+    <form>
+        <table>
+            <tr>
+                <td>用户名</td>
+                <td><input type="text" name="username" id="username" maxlength="10" minlength="2" pattern="^\d{5}" required></td>
+            </tr>
+            <tr>
+                <td>邮箱</td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit"></td>
+            </tr>
+            <tr>
+                <td>搜索框</td>
+                <td><input type="search" name="search" id="search"></td>
+            </tr>
+            <tr>
+                <td>整数选数框</td>
+                <td><input type="number" id="number" max="6" min="2" value="1"></td>
+            </tr>
+            <tr>
+                <td>小数选数框</td>
+                <td><input type="number" id="numbers" value="0.001" step="3" oninput="checkLength(this, 5)"></td><!-- <step>代表一次上下值调整滚动多少值  oninput：html5加入事件实时监听-->
+            </tr>
+        </table>
+        <br>
+        <button>点击以检查邮箱是否可用</button>
+    </form>
+    <script>
+        let username = document.querySelector('#username');
+        let email = document.querySelector('#email');
+        let search = document.querySelector('#search');
+        let number = document.querySelector('#number');
+        let numbers = document.querySelector('#numbers');
+        let btn = document.querySelector('button');
+
+        console.log(username.validity);
+        console.log(email.validity);
+        console.log(search.validity);
+        console.log(number.validity);
+        console.log(numbers.validity);
+
+        function checkLength(obj, length) {
+            if(obj.value > length) {
+                obj.value = obj.value.substr(0, length);
+            }
+        }
+        // checkValidity：如果元素没满足它的任意约束，返回false，其他情况返回true
+        btn.onclick = function() {
+            if(email.checkValidity()){
+                alert("是一个邮箱");
+            }else{
+                alert("不是一个邮箱");
+            }
+        }
+
+    </script>
+</body>
+</html>
