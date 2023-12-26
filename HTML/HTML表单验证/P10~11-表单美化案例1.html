@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            font-family: "Arial", sans-serif;
+        }
         .container {
             max-width: 400px;
             margin: 20px auto;
@@ -13,9 +16,40 @@
             width: 240px;
             margin: 10px 0;
             padding: 0.5em 1em;
+            border: 1px solid #999;
         }
         label {
             margin-left: 10px;
+            font-size: 12px;
+        }
+        input:required,textarea:required {
+            border-right: 3px solid greenyellow;
+        }
+        input:optional,select:optional{
+            border-right: 2px solid #999;
+        }
+        input:required+label::after {
+            content: '(必填)';
+        }
+        input:optional+label::after {
+            content: '(选填)';
+        }
+        input:focus,textarea:focus,select:focus {
+            outline: 0;
+        }
+        input:required:focus,textarea:required:focus {
+            box-shadow: 0px 0px 3px greenyellow;
+        }
+        input:optional:focus,textarea:optional:focus {
+            box-shadow: 0px 0px 3px grey;
+        }
+        input[type=submit] {
+            background-color: greenyellow;
+            width: 268px;
+            padding: 12px 0;
+        }
+        input[type=submit]:hover {
+            background-color: rgb(135, 199, 38);
         }
     </style>
 </head>
@@ -24,8 +58,8 @@
         <form action="">
             <input type="text" id="username" name="username" required><label for="username">用户名</label>
             <input type="email" id="email" name="email" required><label for="email">邮箱</label>
-            <input type="tel" id="tel" name="tel" required><label for="tel">手机</label>
-            <input type="url" id="url" name="url" required><label for="url">网址</label>
+            <input type="tel" id="tel" name="tel"><label for="tel">手机</label>
+            <input type="url" id="url" name="url"><label for="url">网址</label>
             <select name="#" id="">
                 <option value="1">选项一</option>
                 <option value="2">选项二</option>

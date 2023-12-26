@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+        .container {
+            margin: 100px;
+            position: relative;
+            left: 50%;
+            margin-left: -74px;
+        }
+        input {
+            width: 180px;
+            height: 26px;
+            line-height: 26px;
+            padding: 0px 10px;
+            outline: 0;
+            border: 1px solid #999;
+            border-radius: 6px;
+        }
+        span {
+            position: absolute;
+            height: 26px;
+            line-height: 26px;
+            left: 10px;
+            top: 2px;
+            transition: all .3s;
+        }
+        input:hover+span,input:focus+span {
+            transform: translateX(-160%);
+        }
+        input:valid~label::after {
+            content: '输入的邮箱格式正确';
+        }
+        input:invalid~label::after {
+            content: '输入的邮箱格式不正确';
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="mail" type="email">
+        <span>邮箱</span>
+        <label for="mail"></label>
+    </div>
+</body>
+</html>
