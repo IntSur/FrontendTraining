@@ -21,6 +21,14 @@
         .father > li {
             color: rgb(57, 61, 255);
         }
+        /* 相邻兄弟选择器:可选择紧接在另一元素后的元素，且二者有相同父元素 */
+        .union1 + .union2 {
+            font-size: 48px;
+        }
+        /* 后续兄弟选择器:后续兄弟选择器选取所有指定元素之后的相邻兄弟元素。 */
+        ul ~ input {
+            font-size: 48px;
+        }
         /* 属性选择器 */
         input[type] {
             /* 存在type属性的元素会被选择 */
@@ -42,7 +50,7 @@
             /* value属性值以put2结尾的元素会被选择 */
             color: dodgerblue;
         }
-        /* 伪类选择器 */
+        /* 伪元素选择器 */
         p::first-letter {
             /* 第一个字的效果 */
             font-size: 60px;
