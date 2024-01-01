@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 80%;
+            height: 600px;
+            background-color: grey;
+            margin: 0px auto;
+            display: flex;
+            flex-direction: row;/* 属性可填值：row、column、row-reverse、column-reverse  */
+            justify-content: space-between; /* 属性可填值：start、end、center、space-around、space-between */
+            flex-wrap: wrap;/* wrap nowrap */
+            align-items: center;/* 单项才能用这个 */
+            /* align-content: center; 多行用这个 对于单行没有效果 */
+        } 
+        span {
+            /* width: 100px; */
+            flex: 1;
+            height: 200px;
+            background-color: #a3a3a3;
+            box-sizing: content-box;
+            border: 1px solid black;
+        }
+        div span:nth-child(3) {
+            align-self: flex-end;
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>
