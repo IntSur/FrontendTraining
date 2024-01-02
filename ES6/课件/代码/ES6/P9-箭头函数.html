@@ -25,10 +25,10 @@
 
         /* 箭头函数特性1. this 是静态的. this 始终指向函数声明时所在作用域下的 this 的值 */
         function getName(){
-            console.log(this.name);
+            console.log(this.name);//指向window
         }
         let getName2 = () => {
-            console.log(this.name);
+            console.log(this.name);//指向window
         }
 
         //设置 window 对象的 name 属性
@@ -38,12 +38,12 @@
         }
 
         //直接调用
-        // getName();
-        // getName2();
+        getName();
+        getName2();
 
         //call 方法调用(call方法能重新指向对象)
-        // getName.call(school); 返回ATGUIGU
-        // getName2.call(school); 返回尚硅谷，因为它是箭头函数，this依旧指向window
+        getName.call(school); // 返回ATGUIGU
+        getName2.call(school); // 返回尚硅谷，因为它是箭头函数，this依旧指向window
 
         //箭头函数特性2. 不能作为构造实例化对象
         // let Person = (name, age) => {
