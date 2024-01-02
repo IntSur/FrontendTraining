@@ -28,10 +28,10 @@
         div1.addEventListener('touchmove', function(e) {
             console.log('touchmove');
         })
-        /* 手指触摸 */
+        /* 手指停止触摸 */
         div1.addEventListener('touchend', function(e) {
             console.log('touchend');
-            console.log(e);
+            console.log(e.touches);
         })
     </script>
 </body>

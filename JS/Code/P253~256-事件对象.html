@@ -53,9 +53,9 @@
         /* 阻止冒泡 */
         var li1 = document.querySelector('li');
         li1.addEventListener('click', function fn(e) {
-            e.stopPropagation();// 只会阻止li冒泡,不会组织父级元素们冒泡
+            e.stopPropagation();// 只会阻止li冒泡,不会阻止父级元素们冒泡
             console.log('li冒泡');
-        }, false)
+        }, false)/* true标志捕获阶段进行操作 */
     
         var ul2 = li1.parentNode;
         ul2.addEventListener('click', function fn(e) {
