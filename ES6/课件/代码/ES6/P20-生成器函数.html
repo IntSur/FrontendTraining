@@ -11,13 +11,13 @@
         //作用:异步编程  es6以前的异步操作:纯回调函数(node fs ajax mongodb)
         //函数代码的分隔符
         function * gen(){
-            // console.log(111);
+            console.log(111);
             yield '一只没有耳朵';// yield分割了函数 分成几块分别执行
-            // console.log(222);
+            console.log(222);
             yield '一只没有尾部';
-            // console.log(333);
+            console.log(333);
             yield '真奇怪';
-            // console.log(444);
+            console.log(444);
         }
 
         let iterator = gen();
@@ -27,9 +27,9 @@
         console.log(iterator.next());
 
         //遍历
-        // for(let v of gen()){
-        //     console.log(v);
-        // }
+        for(let v of gen()){
+            console.log(v);
+        }
 
     </script>
 </body>

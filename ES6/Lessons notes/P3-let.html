@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <script>
+        //声明变量
+        let a;
+        let b,c,d;
+        let e = 100;
+        let f = 521, g = 'iloveyou', h = [];
+
+        //1. 变量不能重复声明
+        // let star = '罗志祥';
+        // let star = '小猪';
+
+        //2. 块级作用域 let 声明的变量只在 let 命令所在的代码块 {} 内有效，在 {} 之外不能访问
+        {
+            let girl = '周扬青';
+        }
+        console.log(girl);// 返回undefined
+
+        //3. 不存在变量提升
+        console.log(song);// 返回undefined
+        let song = '恋爱达人';
+
+        //4. 不影响作用域链
+        {
+            let school = '尚硅谷';
+            function fn(){
+                console.log(school);// 函数作用域内没有school变量,向上找school变量,找到let定义的school
+            }
+            fn();
+        }
+
+    </script>
+</body>
+</html>
