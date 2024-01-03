@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数参数默认值</title>
+</head>
+<body>
+    <script>
+        /* 1.可以给参数直接设置初始值 */
+        function sum(a, b, c = 10) {
+           return a + b + c; 
+        }
+        console.log(sum(1, 2));
+
+        /* 2.解构赋值作为参数 */
+        function fn1({name, age, gender}) {
+            console.log(name);
+            console.log(age);
+            console.log(gender);
+        }
+        
+        fn1({name: 'fanjiahui', age: 24, gender: 'man'});
+    </script>
+</body>
+</html>

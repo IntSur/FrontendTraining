@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数实践</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: #58a;
+        }
+    </style>
+</head>
+<body>
+    <div id="ad"></div>
+    <script>
+        /* 利用箭头函数的作用域特性 */
+        let div1 = document.querySelector('#ad');
+        div1.onclick = function() {
+            /* 如果用原始函数，this指向了window
+            用箭头函数，this就能指向当前事件作用域，从而改到div1 */
+            setTimeout(() => {
+                this.style.backgroundColor = 'red';
+            }, 3000)
+        }
+
+        /* 筛选出数组里的偶数 */
+        /* 正常写法 */
+        let arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+        let arr2 = arr1.filter(function(number) {
+            return number % 2 === 0;
+        });
+        /* 箭头函数写法 */
+        let arr3 = [1, 2, 3, 4, 5, 6, 7, 8];
+        let arr4 = arr3.filter(num => num % 2 === 0);
+        
+        console.log(arr2);
+        console.log(arr4);
+
+        /* 总结：箭头函数适合用于定时器、数组的方法回调 */
+    </script>
+</body>
+
+</html>

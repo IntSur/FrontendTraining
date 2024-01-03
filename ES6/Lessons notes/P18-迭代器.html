@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迭代器</title>
+</head>
+<body>
+    <script>
+        /* Array Arguments Set Map String TypedArray Nodelist这些数据类型自带iterator迭代器 */
+        let arr1 = [1, 2, 3, 4];
+        
+        /* 有迭代器的数据结构都可以用for...of...遍历里面的值 for...in...遍历里面的键*/
+        for(let k of arr1){
+            console.log(k);
+        }
+        for(let k in arr1){
+            console.log(k);
+        }
+
+        /* 迭代器iterator工作原理 */
+        let iterator1 = arr1[Symbol.iterator]();/* 1.创建指针对象iterator1，指向数据结构的起始位置 */
+        console.log(iterator1.next());/* 2.第一次调用对象的next方法，指向数据结构的第一个成员 */
+        console.log(iterator1.next());/* 3.以此类推 */
+        console.log(iterator1.next());/* 4.每一次next返回一个包含value和done属性的对象 */
+        console.log(iterator1.next());
+        console.log(iterator1.next());
+
+    </script>
+</body>
+</html>

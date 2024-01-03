@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+    <script>
+        /* 声明箭头函数 */
+        let fn = (a, b) => {
+            return a + b;
+        }
+        let result = fn(1, 3);
+        console.log(result);
+
+        /* 1.箭头函数的this始终指向声明时的作用域 */
+        function fn1() {
+            console.log(this.name);
+        }
+        let fn2 = () => {
+            console.log(this.name);
+        }
+        fn1();
+        fn2();
+
+        /* call函数能改变this指向 */
+        window.name = '111';
+        const obj1 = {
+            name: '222',
+        }
+        fn1.call(obj1);//222
+        fn2.call(obj1);//111
+
+        /* 2.箭头函数不能作为构造函数 */
+        /* 3.箭头函数没有arguments变量 */
+        /* 4.箭头函数的简写: 
+        只有一个参数时，不用写()
+        只有一行代码时，不用写{}
+        */
+        let fn3 = (n) => {
+            return n + n;
+        }
+        let fn4 = n => n + n;
+        let result1 = fn3(3);
+        let result2 = fn4(3);
+        console.log(result1);
+        console.log(result2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol</title>
+</head>
+<body>
+    <script>
+        /* symble近似于字符串,但它创建出来的值是独一无二的 */
+        let s1 = Symbol();
+        let s2 = Symbol('一个symble');
+        let s3 = Symbol('一个symble');
+        console.log(s2 === s3);// false
+        let s4 = Symbol.for('一个symble');
+        let s5 = Symbol.for('一个symble');
+        console.log(s2 === s3);// true
+
+        /* symble创建出来的值不能进行运算 */
+    </script>
+</body>
+</html> 

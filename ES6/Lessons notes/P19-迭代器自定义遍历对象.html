@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义遍历数据</title>
+</head>
+
+<body>
+    <script>
+        /* 自定义迭代器 */
+        let obj1 = {
+            name: 'obj1',
+            arr1: [1, 2, 3, 4],
+            [Symbol.iterator](){/* 创建一个方法：创建迭代器 */
+                let index = 0;
+                let _this = this;
+                return {/* 指向对象 */
+                    next: function() {/* 返回next方法 */
+                        if(index < _this.arr1.length) {
+                            const result = {value: _this.arr1[index], done: false};/* 每一次next返回一个包含value和done属性的对象 */
+                            index++;
+                            return result;
+                        } else {
+                            return {value: undefined, done: true};
+                        }
+                        
+                    }
+                }
+            },
+        }
+
+        for(let k of obj1) {/* 对象没有原生迭代器，无法遍历，需要我们给他加一个 */
+            console.log(k);
+        }
+    </script>
+</body>
+
+</html>
