@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类继承-2</title>
+</head>
+<body>
+    <script>
+        /* ES6写法 */
+        class Phone {
+            constructor(model, price) {
+                this.model = model;
+                this.price = price;
+            }
+            call() {
+                console.log('make a phone call');
+            }
+        }
+
+        let iPhone = new Phone('iPhone', 4399);
+        iPhone.call();
+
+        class SmartPhone extends Phone {
+            constructor(model, price, color) {
+                super(model, price);
+                this.color = color;
+            }
+            game() {
+                console.log('play game');
+            }
+            call() {
+                console.log('make a facetime');// 重写父级方法
+            }
+        }
+
+        let iPhone15Pro = new SmartPhone('iPhone15Pro', 7999, 'black');
+        iPhone15Pro.game();
+        iPhone15Pro.call();
+        
+    </script>
+</body>
+</html>

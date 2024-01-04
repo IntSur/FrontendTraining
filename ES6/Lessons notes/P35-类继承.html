@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象继承</title>
+</head>
+<body>
+    <script>
+        /* ES5写法 */
+        function Phone (model) {
+            this.model = model;
+            this.phonecall = function() {
+                console.log('make a phone call');
+            }
+        }
+        Phone.prototype.game = function () {
+            console.log('play game');
+        }
+        
+        function SmartPhone(model, price) {
+            Phone.call(this, model);
+            this.price = price;
+        }
+
+        //设置子级构造函数的原型
+        SmartPhone.prototype = new Phone;//SmartPhone 的实例就可以继承 Phone 的属性和方法，实现了原型链继承。
+        SmartPhone.prototype.constructor = SmartPhone;// 此步骤为校正 可以不写
+
+        /* 声明子类的方法 */
+        SmartPhone.prototype.photo = function() {
+            console.log('take photo');
+        }
+
+        let iPhone = new SmartPhone('iPhone15', 6299);
+        console.log(iPhone.model);
+        console.log(iPhone.price);
+        iPhone.photo();
+        iPhone.phonecall();
+    </script>
+</body>
+</html>
