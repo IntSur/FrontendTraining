@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则扩展-命名捕获分组</title>
+</head>
+
+<body>
+    <script>
+        /* 未使用分组命名 */
+        let str1 = '<a href="https://www.tesla.com">tesla</a>'
+        let reg1 = /<a href="(.*)">(.*)<\/a>/;/* .*：通配 */
+        let result1 = reg1.exec(str1);/* 返回一个数组 */
+        console.log(result1);
+        console.log(result1[1]);
+        console.log(result1[2]);/* 通过下标获取对应数值，但数据一多起来就不方便获取了 */
+
+        /* 使用分组命名 ?<url> ?<text> */
+        let reg2 = /<a href="(?<url>.*)">(?<text>.*)<\/a>/;
+        let result2 = reg2.exec(str1);
+        console.log(result2);
+        console.log(result2.groups.url);
+        console.log(result2.groups.text);
+    </script>
+</body>
+
+</html>

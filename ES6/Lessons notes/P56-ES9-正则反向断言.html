@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则扩展-反向断言</title>
+</head>
+<body>
+    <script>
+        //声明字符串
+        let str = 'JS5211314你知道么555啦啦啦';
+        //正向断言:通过'啦'字往前 选到'555'
+        let reg1 = /\d+(?=啦)/;
+        let result1 = reg1.exec(str);
+        console.log(result1);
+
+        //反向断言:通过'么'字往后 选到'555'。在?=之间加<
+        let reg2 = /(?<=么)\d+/;
+        let result2 = reg2.exec(str);
+        console.log(result2);
+    </script>
+</body>
+</html>

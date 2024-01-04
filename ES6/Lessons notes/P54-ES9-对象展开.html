@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象展开</title>
+</head>
+
+<body>
+    <!-- 
+        Rest 参数与 spread 扩展运算符在 ES6 中已经引入，不过 ES6 中只针对于数组，
+        在 ES9 中为对象提供了像数组一样的 rest 参数和扩展运算符
+     -->
+    <script>
+        /* 与解构赋值结合，分配参数 */
+        function connect({name, ...arg}) {
+            console.log(name);
+            console.log(arg);
+        }
+        connect({
+            name: 'obj1',
+            model: 'model1',
+            price: 1999,
+        })
+
+        /* 对象合并 */
+        let obj1 = {
+            a: 'a-skill',
+        }
+        let obj2 = {
+            b: 'b-skill',
+        }
+        let obj3 = {...obj1, ...obj2}
+        console.log(obj3);
+    </script>
+
+</body>
+
+</html>
