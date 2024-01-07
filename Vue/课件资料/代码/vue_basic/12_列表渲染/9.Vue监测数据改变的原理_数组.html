@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<!-- 准备好一个容器-->
+		<!-- Vue只能检测到修改原数组的方法：pop\push\shift\unshift\splice\reverse\sort,才能触发响应式 -->
 		<div id="root">
 			<h1>学校信息</h1>
 			<h2>学校名称：{{school.name}}</h2>
@@ -60,7 +61,8 @@
 			methods: {
 				addSex(){
 					// Vue.set(this.student,'sex','男')
-					this.$set(this.student,'sex','男')
+					this.$set(this.student, 'sex', '男');/* 修改对象写法 */
+					this.$set(this.student.hobby, 1, '打台球')/* 修改数组写法 */
 				}
 			}
 		})

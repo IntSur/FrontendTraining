@@ -17,7 +17,7 @@
 				1. vue会监视data中所有层次的数据。
 
 				2. 如何监测对象中的数据？
-								通过setter实现监视，且要在new Vue时就传入要监测的数据。vue收到数据后做一系列操作，也就叫数据劫持。
+								通过setter实现监视，且要在new Vue时就传入要监测的数据。
 									(1).对象中后追加的属性，Vue默认不做响应式处理
 									(2).如需给后添加的属性做响应式，请使用如下API：
 													Vue.set(target，propertyName/index，value) 或 
@@ -85,7 +85,7 @@
 					this.$set(this.student,'sex','男')
 				},
 				addFriend(){
-					this.student.friends.unshift({name:'jack',age:70})/* 用unshift往数组中新增的对象也是响应式的 */
+					this.student.friends.unshift({name:'jack',age:70})
 				},
 				updateFirstFriendName(){
 					this.student.friends[0].name = '张三'

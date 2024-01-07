@@ -30,7 +30,7 @@
 				男<input type="radio" name="sex" v-model="userInfo.sex" value="male">
 				女<input type="radio" name="sex" v-model="userInfo.sex" value="female"> <br/><br/>
 				爱好：
-				学习<input type="checkbox" v-model="userInfo.hobby" value="study">
+				学习<input type="checkbox" v-model="userInfo.hobby" value="study"><!-- 可以多选的表单需要用数组来接受，只需单选的用字符串来接受 -->
 				打游戏<input type="checkbox" v-model="userInfo.hobby" value="game">
 				吃饭<input type="checkbox" v-model="userInfo.hobby" value="eat">
 				<br/><br/>
@@ -62,10 +62,10 @@
 					password:'',
 					age:18,
 					sex:'female',
-					hobby:[],
+					hobby:[],/* 可以多选的表单需要用数组来接受 */
 					city:'beijing',
 					other:'',
-					agree:''
+					agree:''/* 只需单选的用字符串来接受 */
 				}
 			},
 			methods: {
