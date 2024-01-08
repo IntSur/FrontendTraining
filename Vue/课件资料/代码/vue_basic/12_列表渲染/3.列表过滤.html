@@ -25,7 +25,7 @@
 			/* new Vue({
 				el:'#root',
 				data:{
-					keyWord:'',
+					keyWord:'',// 空字符串会匹配到所有值
 					persons:[
 						{id:'001',name:'马冬梅',age:19,sex:'女'},
 						{id:'002',name:'周冬雨',age:20,sex:'女'},
@@ -36,7 +36,7 @@
 				},
 				watch:{
 					keyWord:{
-						immediate:true,
+						immediate:true,//避免空字符串会匹配到所有值
 						handler(val){
 							this.filPerons = this.persons.filter((p)=>{
 								return p.name.indexOf(val) !== -1
