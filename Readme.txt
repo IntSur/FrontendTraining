@@ -42,25 +42,25 @@ Tips:  FrontendTraining\JS\Code文件夹内的文件相当于课堂笔记。每�
 
 ------------------------------------------------------------------------------------------------------------
 
-Ajax-Lession Name: 【尚硅谷】3小时Ajax入门到精通
+6.Ajax-Lession Name: 【尚硅谷】3小时Ajax入门到精通
 Video URL:  https://www.bilibili.com/video/BV1WC4y1b78y/?vd_source=dec0df5946c5a4e7864de4bc96371c49
 Tips:  FrontendTraining\Ajax\Lessons notes文件夹内的文件相当于课堂笔记。每次提交名称都会交代对应记录了哪几节课。
 
 ------------------------------------------------------------------------------------------------------------
 
-ES6-Lession Name: 尚硅谷Web前端ES6教程，涵盖ES6-ES11
+7.ES6-Lession Name: 尚硅谷Web前端ES6教程，涵盖ES6-ES11
 Video URL:  https://www.bilibili.com/video/BV1uK411H7on/?vd_source=dec0df5946c5a4e7864de4bc96371c49
 Tips:  FrontendTraining\ES6\Lessons notes文件夹内的文件相当于课堂笔记。每次提交名称都会交代对应记录了哪几节课。
 
 ------------------------------------------------------------------------------------------------------------
 
-NPM-Lession Name: 【NPM】包管理工具 #node package manager
+8.NPM-Lession Name: 【NPM】包管理工具 #node package manager
 Video URL:https://www.bilibili.com/video/BV1Dv411W7XP?p=3&vd_source=dec0df5946c5a4e7864de4bc96371c49
 Tips:  FrontendTraining\npm文件夹内的文件相当于课堂笔记。
 
 ------------------------------------------------------------------------------------------------------------
 
-Vue-Lession Name: 尚硅谷Vue2.0+Vue3.0全套教程丨vuejs从入门到精通
+9.Vue-Lession Name: 尚硅谷Vue2.0+Vue3.0全套教程丨vuejs从入门到精通
 Video URL:  https://www.bilibili.com/video/BV1Zy4y1K7SH/?spm_id_from=333.999.0.0&vd_source=dec0df5946c5a4e7864de4bc96371c49
 Tips:  FrontendTraining\Vue\Lesson notes文件夹内的文件相当于课堂笔记。每次提交名称都会交代对应记录了哪几节课。
 
