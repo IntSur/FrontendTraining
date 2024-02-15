@@ -4,17 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        var c = ()=> {
-            var w = window.document.documentElement.clientWidth;
-            var n = 20*(w/320)>40 ? 40 + 'px' : 20*(w/320) + 'px';
-            console.log(w);
-            console.log(n);
-            window.document.documentElement.style.fontSize = n;
-        }
-        window.addEventListener('load', c);
-        window.addEventListener('resize', c);
-    </script>
+    <script src="./self_adaptation_rem.js"></script>
     <style>
         html {
             font-size: 30px;
