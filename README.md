@@ -1,6 +1,6 @@
 # **IntSur's FrontendTraining**
 
-![](./README.assets/qianduankaifa-2.png)
+![截屏2024-08-03 09.55.08](./README.assets/截屏2024-08-03 09.55.08.png)
 
 ## Learning Pathway🚏
 
